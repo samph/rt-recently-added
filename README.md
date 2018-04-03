@@ -25,6 +25,10 @@ Failing that, the steps broadly are:
 * Improve CSS
 * Allow specification of date ranges rather than number of episodes
 * Allow distinct number of episodes retrieved for each channel
+* Add published timestamp
+* Add video length
+* Add ability to change sorting order. Currently videos are sorted by the time they were available to FIRST members.
+* Add ability to hide videos that are only available to FIRST members
 
 # Images
 
