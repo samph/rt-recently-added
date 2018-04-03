@@ -22,6 +22,7 @@ Failing that, the steps broadly are:
 * Consider implementing caching so API calls are not made on every request
 * Implement tests
 * Improve setup scripts and make cross platform.
+* Stop using bat scripts. They make me sad.
 * Improve CSS
 * Allow specification of date ranges rather than number of episodes
 * Allow distinct number of episodes retrieved for each channel
