@@ -1,0 +1,118 @@
+.grid-blocks {
+  width: 100%;
+  display: inline-block; }
+  .grid-blocks > li {
+    margin-top: 15px;
+    -webkit-transition: opacity 0.15s ease-in-out;
+    -moz-transition: opacity 0.15s ease-in-out;
+    transition: opacity 0.15s ease-in-out; }
+    .grid-blocks > li:hover {
+      opacity: .9; }
+    @media screen and (min-width: 768px) {
+      .grid-blocks > li {
+        float: left;
+        display: block;
+        margin-right: 1%;
+        width: 15%; }
+        .grid-blocks > li:last-child {
+          margin-right: 0; }
+        .grid-blocks > li:nth-child(6n) {
+          margin-right: 0; }
+        .grid-blocks > li:nth-child(6n+1) {
+          clear: left; } }
+    .grid-blocks > li .block-container {
+      position: relative;
+      overflow: hidden; }
+      .grid-blocks > li .block-container:hover .timestamp {
+        background-color: #9e1d22; }
+        .grid-blocks > li .block-container:hover .timestamp:hover.watch-status-container {
+          background-color: rgba(1, 1, 1, 0.6); }
+      .grid-blocks > li .block-container .ion-star {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        line-height: 1.2;
+        padding: 2px 5px;
+        font-size: 18px;
+        background-color: rgba(1, 1, 1, 0.6); }
+      .grid-blocks > li .block-container .episode-action-bar {
+        position: absolute;
+        right: 0px;
+        bottom: 0px; }
+      .grid-blocks > li .block-container div.image-container {
+        position: relative; }
+        .grid-blocks > li .block-container div.image-container:before {
+          display: block;
+          content: "";
+          width: 100%;
+          padding-top: 56.25%; }
+        .grid-blocks > li .block-container div.image-container img {
+          max-width: 100%;
+          width: 100%;
+          height: auto;
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0; }
+          @supports (object-fit: cover) {
+            .grid-blocks > li .block-container div.image-container img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover; } }
+      .grid-blocks > li .block-container .timestamp {
+        float: right;
+        text-align: center;
+        line-height: 1.7;
+        margin: 0;
+        padding: 6px 15px;
+        background: rgba(1, 1, 1, 0.6);
+        color: white; }
+        .grid-blocks > li .block-container .timestamp .icon {
+          padding-right: 3px; }
+      .grid-blocks > li .block-container .watch-status-container {
+        float: right;
+        background: rgba(1, 1, 1, 0.6);
+        margin-left: 1px; }
+        .grid-blocks > li .block-container .watch-status-container:hover {
+          background-color: #9e1d22; }
+        .grid-blocks > li .block-container .watch-status-container .watched {
+          padding-left: 10px;
+          padding-right: 10px;
+          line-height: 2.5;
+          color: white; }
+        .grid-blocks > li .block-container .watch-status-container:hover + .timestamp {
+          background-color: rgba(1, 1, 1, 0.6); }
+        .grid-blocks > li .block-container .watch-status-container button.queue-button-add, .grid-blocks > li .block-container .watch-status-container button.queue-button-remove {
+          height: 32px;
+          width: 32px;
+          padding: 0;
+          margin: 0;
+          background-color: transparent;
+          box-shadow: none; }
+          .grid-blocks > li .block-container .watch-status-container button.queue-button-add:before, .grid-blocks > li .block-container .watch-status-container button.queue-button-remove:before {
+            font-size: 16px;
+            right: 9px;
+            top: 8px; }
+          .grid-blocks > li .block-container .watch-status-container button.queue-button-add:focus, .grid-blocks > li .block-container .watch-status-container button.queue-button-add:active, .grid-blocks > li .block-container .watch-status-container button.queue-button-add:hover, .grid-blocks > li .block-container .watch-status-container button.queue-button-remove:focus, .grid-blocks > li .block-container .watch-status-container button.queue-button-remove:active, .grid-blocks > li .block-container .watch-status-container button.queue-button-remove:hover {
+            border: none;
+            background-color: transparent; }
+          .grid-blocks > li .block-container .watch-status-container button.queue-button-add:before, .grid-blocks > li .block-container .watch-status-container button.queue-button-add:hover:before, .grid-blocks > li .block-container .watch-status-container button.queue-button-remove:before, .grid-blocks > li .block-container .watch-status-container button.queue-button-remove:hover:before {
+            color: white;
+            line-height: 1; }
+      @media screen and (min-width: 768px) {
+        .grid-blocks > li .block-container .watch-status-container button.queue-button-add, .grid-blocks > li .block-container .watch-status-container button.queue-button-remove {
+          height: 18px;
+          width: 20px; }
+          .grid-blocks > li .block-container .watch-status-container button.queue-button-add:before, .grid-blocks > li .block-container .watch-status-container button.queue-button-remove:before {
+            top: 0px;
+            right: 3px; }
+        .grid-blocks > li .block-container .watch-status-container .watched {
+          line-height: 1; }
+        .grid-blocks > li .block-container .timestamp {
+          padding: 0 .5em; }
+        .grid-blocks > li .block-container .ion-star {
+          font-size: 16px; } }
+    .grid-blocks > li .name {
+      margin: 0px;
+      margin-top: 5px; }
