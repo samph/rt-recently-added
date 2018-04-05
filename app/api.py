@@ -50,6 +50,16 @@ def get_episode_pages(channel_name,
     return episodes
 
 
+def _timestamp_string(seconds):
+    m, s = divmod(seconds, 60)
+    h, m = divmod(m, 60)
+    if h > 0:
+        timestamp = ("(%d:%02d:%02d)" % (h, m, s))
+    else:
+        timestamp = ("(%d:%02d)" % (m, s))
+    return timestamp
+
+
 def get_episodes(channel_name,
                  channel_eps_api_url,
                  page="1",
@@ -63,8 +73,10 @@ def get_episodes(channel_name,
         episodes = []
         EpisodeData = namedtuple('EpisodeData', 'name link thumb date')
         for ep in eps_data:
+            length = ep['attributes']['length']
+            timestamp = _timestamp_string(length)
             title = ep['attributes']['show_title'] + \
-                     " - " + ep['attributes']['title']
+                     " - " + ep['attributes']['title'] + " " + timestamp
             link = DOMAIN + ep['canonical_links']['self']
             thumb = ep['included']['images'][0]['attributes']['small']
             live_at = ep['attributes']['sponsor_golive_at']
